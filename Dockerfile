@@ -22,4 +22,5 @@ COPY config/00-ioncube.ini /etc/php/7.0/cli/conf.d/
 
 VOLUME /app/zentaopms /var/lib/mysql
 COPY docker-entrypoint.sh /app
+RUN ["chmod", "+x", "/app/docker-entrypoint.sh"]
 ENTRYPOINT ["/app/docker-entrypoint.sh"]
